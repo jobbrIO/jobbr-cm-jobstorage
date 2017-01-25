@@ -8,7 +8,5 @@ namespace Jobbr.ComponentModel.JobStorage.Model
         public DateTime StartDateTimeUtc { get; set; }
 
         public string Comment { get; set; }
-
-        public string Parameters { get; set; }
     }
 }
