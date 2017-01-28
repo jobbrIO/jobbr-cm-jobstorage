@@ -1,0 +1,17 @@
+﻿<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Jobbr.ComponentModel.JobStorage</id>
+    <version>$version$</version>
+    <authors>Jobbr</authors>
+    <owners>Jobbr</owners>
+    <projectUrl>http://github.com/jobbrIO/jobbr-cm-jobstorage</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Jobbr is a .NET JobServer</description>
+    <copyright>Copyright 2016</copyright>
+  </metadata>
+  <files>
+    <file src="Jobbr.ComponentModel.JobStorage/bin/Release/Jobbr.ComponentModel.JobStorage.dll" target="lib\net45"/>
+    <file src="Jobbr.ComponentModel.JobStorage/bin/Release/Jobbr.ComponentModel.JobStorage.pdb" target="lib\net45"/>
+  </files>
+</package>
