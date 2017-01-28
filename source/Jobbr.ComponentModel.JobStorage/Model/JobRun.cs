@@ -5,6 +5,14 @@ namespace Jobbr.ComponentModel.JobStorage.Model
     [Serializable]
     public enum JobRunStates
     {
+        Collecting,
+        Connected,
+        Finishing,
+        Initializing,
+        Preparing,
+        Processing,
+        Started,
+        Starting,
         Completed,
         Scheduled
     }
