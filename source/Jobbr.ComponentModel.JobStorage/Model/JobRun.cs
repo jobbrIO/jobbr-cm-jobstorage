@@ -14,7 +14,8 @@ namespace Jobbr.ComponentModel.JobStorage.Model
         Started,
         Starting,
         Completed,
-        Scheduled
+        Scheduled,
+        Progressing
     }
 
     [Serializable]
