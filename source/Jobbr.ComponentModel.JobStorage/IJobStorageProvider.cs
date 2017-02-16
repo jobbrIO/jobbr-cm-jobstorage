@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Jobbr.ComponentModel.JobStorage.Model;
 
 namespace Jobbr.ComponentModel.JobStorage
@@ -42,6 +43,8 @@ namespace Jobbr.ComponentModel.JobStorage
         Job GetJobByUniqueName(string identifier);
 
         JobRun GetJobRunById(long id);
+
+        JobRun GetJobRunById(Guid uniqueId);
 
         List<JobRun> GetJobRunsForUserId(long userId);
 
