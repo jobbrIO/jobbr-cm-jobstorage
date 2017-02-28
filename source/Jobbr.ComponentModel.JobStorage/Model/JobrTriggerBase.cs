@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Jobbr.ComponentModel.JobStorage.Model
 {
@@ -16,5 +12,6 @@ namespace Jobbr.ComponentModel.JobStorage.Model
         public long? UserId { get; set; }
         public string UserName { get; set; }
         public string Parameters { get; set; }
+        public string Comment { get; set; }
     }
 }

@@ -6,7 +6,5 @@ namespace Jobbr.ComponentModel.JobStorage.Model
     public class ScheduledTrigger : JobTriggerBase
     {
         public DateTime StartDateTimeUtc { get; set; }
-
-        public string Comment { get; set; }
     }
 }
