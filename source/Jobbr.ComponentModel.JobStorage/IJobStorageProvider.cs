@@ -44,8 +44,6 @@ namespace Jobbr.ComponentModel.JobStorage
 
         JobRun GetJobRunById(long id);
 
-        JobRun GetJobRunById(Guid uniqueId);
-
         List<JobRun> GetJobRunsForUserId(long userId);
 
         List<JobRun> GetJobRunsForUserName(string userName);

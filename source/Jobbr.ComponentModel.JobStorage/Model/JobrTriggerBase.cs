@@ -13,5 +13,6 @@ namespace Jobbr.ComponentModel.JobStorage.Model
         public string UserName { get; set; }
         public string Parameters { get; set; }
         public string Comment { get; set; }
+        public DateTime CreatedDateTimeUtc { get; set; }
     }
 }
