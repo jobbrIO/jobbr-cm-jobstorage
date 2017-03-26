@@ -26,9 +26,9 @@ namespace Jobbr.ComponentModel.JobStorage
 
         JobTriggerBase GetTriggerById(long triggerId);
 
-        JobRun GetLastJobRunByTriggerId(long triggerId);
+        JobRun GetLastJobRunByTriggerId(long triggerId, DateTime utcNow);
 
-        JobRun GetFutureJobRunsByTriggerId(long triggerId);
+        JobRun GetFutureJobRunsByTriggerId(long triggerId, DateTime utcNow);
 
         int AddJobRun(JobRun jobRun);
 
