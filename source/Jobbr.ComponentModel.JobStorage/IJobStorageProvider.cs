@@ -4,13 +4,29 @@ using Jobbr.ComponentModel.JobStorage.Model;
 
 namespace Jobbr.ComponentModel.JobStorage
 {
+    /// <summary>
+    /// Interface that specifies how the store can be accessed.
+    /// 
+    /// Note: The different entities are grouped by entity.
+    /// The methods are ordered by the CRUD-principle.
+    /// </summary>
     public interface IJobStorageProvider
     {
-        List<Job> GetJobs();
+        #region Jobs
 
         long AddJob(Job job);
 
-        List<JobTriggerBase> GetTriggersByJobId(long jobId);
+        List<Job> GetJobs();
+
+        Job GetJobById(long id);
+
+        Job GetJobByUniqueName(string identifier);
+
+        bool Update(Job job);
+
+        #endregion
+
+        #region Triggers
 
         long AddTrigger(RecurringTrigger trigger);
 
@@ -18,37 +34,15 @@ namespace Jobbr.ComponentModel.JobStorage
 
         long AddTrigger(ScheduledTrigger trigger);
 
-        bool DisableTrigger(long triggerId);
+        JobTriggerBase GetTriggerById(long triggerId);
 
-        bool EnableTrigger(long triggerId);
+        List<JobTriggerBase> GetTriggersByJobId(long jobId);
 
         List<JobTriggerBase> GetActiveTriggers();
 
-        JobTriggerBase GetTriggerById(long triggerId);
+        bool DisableTrigger(long triggerId);
 
-        JobRun GetLastJobRunByTriggerId(long triggerId, DateTime utcNow);
-
-        JobRun GetFutureJobRunsByTriggerId(long triggerId, DateTime utcNow);
-
-        int AddJobRun(JobRun jobRun);
-
-        List<JobRun> GetJobRuns();
-
-        bool UpdateProgress(long jobRunId, double? progress);
-
-        bool Update(JobRun jobRun);
-
-        Job GetJobById(long id);
-
-        Job GetJobByUniqueName(string identifier);
-
-        JobRun GetJobRunById(long id);
-
-        List<JobRun> GetJobRunsForUserId(long userId);
-
-        List<JobRun> GetJobRunsForUserName(string userName);
-
-        bool Update(Job job);
+        bool EnableTrigger(long triggerId);
 
         bool Update(InstantTrigger trigger);
 
@@ -56,9 +50,33 @@ namespace Jobbr.ComponentModel.JobStorage
 
         bool Update(RecurringTrigger trigger);
 
+        #endregion
+
+        #region Jobruns
+
+        int AddJobRun(JobRun jobRun);
+
+        List<JobRun> GetJobRuns();
+
+        JobRun GetJobRunById(long id);
+
+        JobRun GetLastJobRunByTriggerId(long triggerId, DateTime utcNow);
+
+        JobRun GetNextJobRunByTriggerId(long triggerId, DateTime utcNow);
+
         List<JobRun> GetJobRunsByTriggerId(long triggerId);
 
         List<JobRun> GetJobRunsByState(JobRunStates state);
+
+        List<JobRun> GetJobRunsByUserId(long userId);
+
+        List<JobRun> GetJobRunsByUserName(string userName);
+
+        bool Update(JobRun jobRun);
+
+        bool UpdateProgress(long jobRunId, double? progress);
+
+        #endregion
 
         bool CheckParallelExecution(long triggerId);
     }
