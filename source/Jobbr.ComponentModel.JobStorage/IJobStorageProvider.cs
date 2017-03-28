@@ -49,15 +49,15 @@ namespace Jobbr.ComponentModel.JobStorage
 
         List<JobTriggerBase> GetActiveTriggers();
 
-        bool DisableTrigger(long jobId, long triggerId);
+        void DisableTrigger(long jobId, long triggerId);
 
-        bool EnableTrigger(long jobId, long triggerId);
+        void EnableTrigger(long jobId, long triggerId);
 
-        bool Update(long jobId, InstantTrigger trigger);
+        void Update(long jobId, InstantTrigger trigger);
 
-        bool Update(long jobId, ScheduledTrigger trigger);
+        void Update(long jobId, ScheduledTrigger trigger);
 
-        bool Update(long jobId, RecurringTrigger trigger);
+        void Update(long jobId, RecurringTrigger trigger);
 
         #endregion
 
