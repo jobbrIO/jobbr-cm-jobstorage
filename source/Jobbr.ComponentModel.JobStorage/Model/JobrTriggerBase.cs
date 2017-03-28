@@ -14,7 +14,6 @@ namespace Jobbr.ComponentModel.JobStorage.Model
         public bool IsActive { get; set; }
         public string UserDisplayName { get; set; }
         public string UserId { get; set; }
-        public string UserName { get; set; }
         public string Parameters { get; set; }
         public string Comment { get; set; }
         public DateTime CreatedDateTimeUtc { get; set; }

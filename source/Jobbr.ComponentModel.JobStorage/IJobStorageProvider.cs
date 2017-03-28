@@ -87,17 +87,17 @@ namespace Jobbr.ComponentModel.JobStorage
         /// <summary>
         /// Get JobRuns by state, ordered by PlannedStartDateTimeUtc ascending
         /// </summary>
-        List<JobRun> GetJobRunsByState(JobRunStates state);
+        List<JobRun> GetJobRunsByState(JobRunStates state, long page = 0, long pageSize = 50);
 
         /// <summary>
         /// Get JobRuns by user id, ordered by PlannedStartDateTimeUtc ascending
         /// </summary>
-        List<JobRun> GetJobRunsByUserId(long userId);
+        List<JobRun> GetJobRunsByUserId(string userId, long page = 0, long pageSize = 50);
 
         /// <summary>
-        /// Get JobRuns by user name, ordered by PlannedStartDateTimeUtc ascending
+        /// Get JobRuns by user display name, ordered by PlannedStartDateTimeUtc ascending
         /// </summary>
-        List<JobRun> GetJobRunsByUserName(string userName);
+        List<JobRun> GetJobRunsByUserDisplayName(string userDisplayName, long page = 0, long pageSize = 50);
 
         void Update(JobRun jobRun);
 
