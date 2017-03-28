@@ -80,7 +80,7 @@ namespace Jobbr.ComponentModel.JobStorage
         JobRun GetNextJobRunByTriggerId(long jobId, long triggerId, DateTime utcNow);
 
         /// <summary>
-        /// Triggers are orderd by date descending
+        /// Get JobRuns by Trigger ordered by PlannedStartDateTimeUtc descending
         /// </summary>
         List<JobRun> GetJobRunsByTriggerId(long jobId, long triggerId, long page = 0, long pageSize = 50);
 
