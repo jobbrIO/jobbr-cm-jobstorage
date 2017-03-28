@@ -63,7 +63,10 @@ namespace Jobbr.ComponentModel.JobStorage
 
         #region Jobruns
 
-        int AddJobRun(JobRun jobRun);
+        /// <summary>
+        /// Add a JobRun. JobRun.Id will be set after calling this method.
+        /// </summary>
+        void AddJobRun(JobRun jobRun);
 
         /// <summary>
         /// Get JobRuns ordered by PlannedStartDateTimeUtc descending
