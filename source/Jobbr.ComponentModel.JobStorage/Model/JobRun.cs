@@ -82,7 +82,6 @@ namespace Jobbr.ComponentModel.JobStorage.Model
         public long Id { get; set; }
         public long JobId { get; set; }
         public long TriggerId { get; set; }
-        public Guid UniqueId { get; set; }
         public JobRunStates State { get; set; }
         public double? Progress { get; set; }
 
@@ -95,6 +94,6 @@ namespace Jobbr.ComponentModel.JobStorage.Model
 
         public string InstanceParameters { get; set; }
 
-        public int Pid { get; set; }
+        public int? Pid { get; set; }
     }
 }
