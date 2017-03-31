@@ -16,6 +16,8 @@ namespace Jobbr.ComponentModel.JobStorage
         /// </summary>
         void AddJob(Job job);
 
+        long GetJobsCount();
+
         List<Job> GetJobs(int page = 0, int pageSize = 50);
 
         Job GetJobById(long id);
