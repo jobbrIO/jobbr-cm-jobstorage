@@ -73,7 +73,7 @@ namespace Jobbr.ComponentModel.JobStorage
         /// <summary>
         /// Get JobRuns ordered by PlannedStartDateTimeUtc descending
         /// </summary>
-        List<JobRun> GetJobRuns(long page = 0, long pageSize = 50);
+        List<JobRun> GetJobRuns(int page = 0, int pageSize = 50);
 
         JobRun GetJobRunById(long id);
 
@@ -84,22 +84,22 @@ namespace Jobbr.ComponentModel.JobStorage
         /// <summary>
         /// Get JobRuns by Trigger ordered by PlannedStartDateTimeUtc descending
         /// </summary>
-        List<JobRun> GetJobRunsByTriggerId(long jobId, long triggerId, long page = 0, long pageSize = 50);
+        List<JobRun> GetJobRunsByTriggerId(long jobId, long triggerId, int page = 0, int pageSize = 50);
 
         /// <summary>
         /// Get JobRuns by state, ordered by PlannedStartDateTimeUtc ascending
         /// </summary>
-        List<JobRun> GetJobRunsByState(JobRunStates state, long page = 0, long pageSize = 50);
+        List<JobRun> GetJobRunsByState(JobRunStates state, int page = 0, int pageSize = 50);
 
         /// <summary>
         /// Get JobRuns by user id, ordered by PlannedStartDateTimeUtc ascending
         /// </summary>
-        List<JobRun> GetJobRunsByUserId(string userId, long page = 0, long pageSize = 50);
+        List<JobRun> GetJobRunsByUserId(string userId, int page = 0, int pageSize = 50);
 
         /// <summary>
         /// Get JobRuns by user display name, ordered by PlannedStartDateTimeUtc ascending
         /// </summary>
-        List<JobRun> GetJobRunsByUserDisplayName(string userDisplayName, long page = 0, long pageSize = 50);
+        List<JobRun> GetJobRunsByUserDisplayName(string userDisplayName, int page = 0, int pageSize = 50);
 
         void Update(JobRun jobRun);
 
