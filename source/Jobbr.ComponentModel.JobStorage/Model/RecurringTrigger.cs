@@ -11,8 +11,6 @@ namespace Jobbr.ComponentModel.JobStorage.Model
 
         public string Definition { get; set; }
 
-        public string Comment { get; set; }
-
         public bool NoParallelExecution { get; set; }
     }
 }

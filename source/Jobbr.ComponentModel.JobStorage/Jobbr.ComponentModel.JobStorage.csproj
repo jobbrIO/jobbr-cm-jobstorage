@@ -45,8 +45,8 @@
     <Compile Include="Model\JobrTriggerBase.cs" />
     <Compile Include="Model\InstantTrigger.cs" />
     <Compile Include="Model\Job.cs" />
-    <Compile Include="Model\JobArtefact.cs" />
     <Compile Include="Model\JobRun.cs" />
+    <Compile Include="Model\JobRunStates.cs" />
     <Compile Include="Model\RecurringTrigger.cs" />
     <Compile Include="Model\ScheduledTrigger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
