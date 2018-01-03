@@ -20,7 +20,7 @@ namespace Jobbr.ComponentModel.JobStorage
 
         long GetJobsCount();
 
-        List<Job> GetJobs(int page = 0, int pageSize = 50, string jobTypeFilter = null, string jobUniqueNameFilter = null, string query = null, params string[] sort);
+        List<Job> GetJobs(int page = 1, int pageSize = 50, string jobTypeFilter = null, string jobUniqueNameFilter = null, string query = null, params string[] sort);
 
         Job GetJobById(long id);
 
@@ -51,7 +51,7 @@ namespace Jobbr.ComponentModel.JobStorage
 
         List<JobTriggerBase> GetTriggersByJobId(long jobId);
 
-        List<JobTriggerBase> GetActiveTriggers(int page = 0, int pageSize = 50, string jobTypeFilter = null, string jobUniqueNameFilter = null, string query = null, params string[] sort);
+        List<JobTriggerBase> GetActiveTriggers(int page = 1, int pageSize = 50, string jobTypeFilter = null, string jobUniqueNameFilter = null, string query = null, params string[] sort);
 
         void DisableTrigger(long jobId, long triggerId);
 
@@ -77,7 +77,7 @@ namespace Jobbr.ComponentModel.JobStorage
         /// <summary>
         /// Get JobRuns ordered by PlannedStartDateTimeUtc descending
         /// </summary>
-        List<JobRun> GetJobRuns(int page = 0, int pageSize = 50, string jobTypeFilter = null, string jobUniqueNameFilter = null, string query = null, params string[] sort);
+        List<JobRun> GetJobRuns(int page = 1, int pageSize = 50, string jobTypeFilter = null, string jobUniqueNameFilter = null, string query = null, params string[] sort);
 
         JobRun GetJobRunById(long id);
 
@@ -88,22 +88,22 @@ namespace Jobbr.ComponentModel.JobStorage
         /// <summary>
         /// Get JobRuns by Trigger ordered by PlannedStartDateTimeUtc descending
         /// </summary>
-        List<JobRun> GetJobRunsByTriggerId(long jobId, long triggerId, int page = 0, int pageSize = 50, params string[] sort);
+        List<JobRun> GetJobRunsByTriggerId(long jobId, long triggerId, int page = 1, int pageSize = 50, params string[] sort);
 
         /// <summary>
         /// Get JobRuns by state, ordered by PlannedStartDateTimeUtc ascending
         /// </summary>
-        List<JobRun> GetJobRunsByState(JobRunStates state, int page = 0, int pageSize = 50, string jobTypeFilter = null, string jobUniqueNameFilter = null, string query = null, params string[] sort);
+        List<JobRun> GetJobRunsByState(JobRunStates state, int page = 1, int pageSize = 50, string jobTypeFilter = null, string jobUniqueNameFilter = null, string query = null, params string[] sort);
 
         /// <summary>
         /// Get JobRuns by user id, ordered by PlannedStartDanteTimeUtc ascending
         /// </summary>
-        List<JobRun> GetJobRunsByUserId(string userId, int page = 0, int pageSize = 50, string jobTypeFilter = null, string jobUniqueNameFilter = null, params string[] sort);
+        List<JobRun> GetJobRunsByUserId(string userId, int page = 1, int pageSize = 50, string jobTypeFilter = null, string jobUniqueNameFilter = null, params string[] sort);
 
         /// <summary>
         /// Get JobRuns by user display name
         /// </summary>
-        List<JobRun> GetJobRunsByUserDisplayName(string userDisplayName, int page = 0, int pageSize = 50, string jobTypeFilter = null, string jobUniqueNameFilter = null, params string[] sort);
+        List<JobRun> GetJobRunsByUserDisplayName(string userDisplayName, int page = 1, int pageSize = 50, string jobTypeFilter = null, string jobUniqueNameFilter = null, params string[] sort);
 
         void Update(JobRun jobRun);
 
