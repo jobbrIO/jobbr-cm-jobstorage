@@ -16,9 +16,6 @@ namespace Jobbr.ComponentModel.JobStorage.Model
         public DateTime? ActualEndDateTimeUtc { get; set; }
         public DateTime? EstimatedEndDateTimeUtc { get; set; }
 
-        public string JobParameters { get; set; }		
-        public string InstanceParameters { get; set; }		
-
         public int? Pid { get; set; }
     }
 }
