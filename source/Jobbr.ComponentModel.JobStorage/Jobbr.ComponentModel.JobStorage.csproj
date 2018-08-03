@@ -49,6 +49,7 @@
     <Compile Include="Model\JobRunStates.cs" />
     <Compile Include="Model\RecurringTrigger.cs" />
     <Compile Include="Model\ScheduledTrigger.cs" />
+    <Compile Include="PagedResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
