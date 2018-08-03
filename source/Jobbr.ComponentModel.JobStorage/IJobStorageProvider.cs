@@ -74,12 +74,11 @@ namespace Jobbr.ComponentModel.JobStorage
         /// </summary>
         void AddJobRun(JobRun jobRun);
 
-        /// <summary>
-        /// Get JobRuns ordered by PlannedStartDateTimeUtc descending
-        /// </summary>
-        PagedResult<JobRun> GetJobRuns(int jobId, int page = 1, int pageSize = 50, string jobTypeFilter = null, string jobUniqueNameFilter = null, string query = null, params string[] sort);
-
         JobRun GetJobRunById(long id);
+
+        PagedResult<JobRun> GetJobRuns(int page = 1, int pageSize = 50, string jobTypeFilter = null, string jobUniqueNameFilter = null, string query = null, params string[] sort);
+
+        PagedResult<JobRun> GetJobRunsByJobId(int jobId, int page = 1, int pageSize = 50, string jobTypeFilter = null, string jobUniqueNameFilter = null, string query = null, params string[] sort);
 
         JobRun GetLastJobRunByTriggerId(long jobId, long triggerId, DateTime utcNow);
 
