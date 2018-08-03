@@ -49,7 +49,7 @@ namespace Jobbr.ComponentModel.JobStorage
 
         JobTriggerBase GetTriggerById(long jobId, long triggerId);
 
-        PagedResult<JobTriggerBase> GetTriggersByJobId(long jobId);
+        PagedResult<JobTriggerBase> GetTriggersByJobId(long jobId, int page = 1, int pageSize = 50);
 
         PagedResult<JobTriggerBase> GetActiveTriggers(int page = 1, int pageSize = 50, string jobTypeFilter = null, string jobUniqueNameFilter = null, string query = null, params string[] sort);
 
