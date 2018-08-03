@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using Jobbr.ComponentModel.JobStorage.Model;
 
 namespace Jobbr.ComponentModel.JobStorage
@@ -76,33 +75,21 @@ namespace Jobbr.ComponentModel.JobStorage
 
         JobRun GetJobRunById(long id);
 
-        PagedResult<JobRun> GetJobRuns(int page = 1, int pageSize = 50, string jobTypeFilter = null, string jobUniqueNameFilter = null, string query = null, params string[] sort);
-
-        PagedResult<JobRun> GetJobRunsByJobId(int jobId, int page = 1, int pageSize = 50, string jobTypeFilter = null, string jobUniqueNameFilter = null, string query = null, params string[] sort);
-
         JobRun GetLastJobRunByTriggerId(long jobId, long triggerId, DateTime utcNow);
 
         JobRun GetNextJobRunByTriggerId(long jobId, long triggerId, DateTime utcNow);
 
-        /// <summary>
-        /// Get JobRuns by Trigger ordered by PlannedStartDateTimeUtc descending
-        /// </summary>
-        PagedResult<JobRun> GetJobRunsByTriggerId(long jobId, long triggerId, int page = 1, int pageSize = 50, params string[] sort);
+        PagedResult<JobRun> GetJobRuns(int page = 1, int pageSize = 50, string jobTypeFilter = null, string jobUniqueNameFilter = null, string query = null, params string[] sort);
 
-        /// <summary>
-        /// Get JobRuns by state, ordered by PlannedStartDateTimeUtc ascending
-        /// </summary>
-        PagedResult<JobRun> GetJobRunsByState(JobRunStates state, int page = 1, int pageSize = 50, string jobTypeFilter = null, string jobUniqueNameFilter = null, string query = null, params string[] sort);
+        PagedResult<JobRun> GetJobRunsByJobId(int jobId, int page = 1, int pageSize = 50, params string[] sort);
 
-        /// <summary>
-        /// Get JobRuns by user id, ordered by PlannedStartDanteTimeUtc ascending
-        /// </summary>
         PagedResult<JobRun> GetJobRunsByUserId(string userId, int page = 1, int pageSize = 50, string jobTypeFilter = null, string jobUniqueNameFilter = null, params string[] sort);
 
-        /// <summary>
-        /// Get JobRuns by user display name
-        /// </summary>
+        PagedResult<JobRun> GetJobRunsByTriggerId(long jobId, long triggerId, int page = 1, int pageSize = 50, params string[] sort);
+
         PagedResult<JobRun> GetJobRunsByUserDisplayName(string userDisplayName, int page = 1, int pageSize = 50, string jobTypeFilter = null, string jobUniqueNameFilter = null, params string[] sort);
+
+        PagedResult<JobRun> GetJobRunsByState(JobRunStates state, int page = 1, int pageSize = 50, string jobTypeFilter = null, string jobUniqueNameFilter = null, string query = null, params string[] sort);
 
         void Update(JobRun jobRun);
 
