@@ -12,5 +12,6 @@ namespace Jobbr.ComponentModel.JobStorage.Model
         public string Type { get; set; }
         public DateTime? UpdatedDateTimeUtc { get; set; }
         public DateTime? CreatedDateTimeUtc { get; set; }
+        public bool Deleted { get; set; }
     }
 }

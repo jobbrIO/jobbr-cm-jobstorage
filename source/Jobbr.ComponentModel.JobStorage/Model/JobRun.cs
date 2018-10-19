@@ -20,5 +20,6 @@ namespace Jobbr.ComponentModel.JobStorage.Model
         public string InstanceParameters { get; set; }		
 
         public int? Pid { get; set; }
+        public bool Deleted { get; set; }
     }
 }

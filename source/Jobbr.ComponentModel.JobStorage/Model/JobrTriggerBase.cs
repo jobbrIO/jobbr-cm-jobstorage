@@ -17,5 +17,6 @@ namespace Jobbr.ComponentModel.JobStorage.Model
         public string Parameters { get; set; }
         public string Comment { get; set; }
         public DateTime CreatedDateTimeUtc { get; set; }
+        public bool Deleted { get; set; }
     }
 }
