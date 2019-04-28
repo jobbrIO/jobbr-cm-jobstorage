@@ -13,7 +13,12 @@
     <iconUrl>https://raw.githubusercontent.com/jobbrIO/artwork/master/build/icons/icon_addon_256_dark.png</iconUrl>
   </metadata>
   <files>
-    <file src="Jobbr.ComponentModel.JobStorage/bin/Release/Jobbr.ComponentModel.JobStorage.dll" target="lib\net462"/>
-    <file src="Jobbr.ComponentModel.JobStorage/bin/Release/Jobbr.ComponentModel.JobStorage.pdb" target="lib\net462"/>
+    <!-- .NET Framework 4.6.2 -->
+    <file src="Jobbr.ComponentModel.JobStorage/bin/Release/net462/Jobbr.ComponentModel.JobStorage.dll" target="lib\net462"/>
+    <file src="Jobbr.ComponentModel.JobStorage/bin/Release/net462/Jobbr.ComponentModel.JobStorage.pdb" target="lib\net462"/>
+    
+    <!-- .NET Standard 2.0 -->
+    <file src="Jobbr.ComponentModel.JobStorage/bin/Release/netstandard2.0/Jobbr.ComponentModel.JobStorage.dll" target="lib\netstandard2.0"/>
+    <file src="Jobbr.ComponentModel.JobStorage/bin/Release/netstandard2.0/Jobbr.ComponentModel.JobStorage.pdb" target="lib\netstandard2.0"/>
   </files>
 </package>
