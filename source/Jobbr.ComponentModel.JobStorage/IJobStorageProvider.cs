@@ -4,4 +4,4 @@
 
 
 
-        #endregion        #region Retention        void HardDeleteJobsOlderThan(DateTimeOffset date);        #endregion    }}
+        #endregion        #region Retention        void HardDeleteJobRunsOlderThan(DateTimeOffset date);        #endregion    }}
