@@ -79,18 +79,10 @@ namespace Jobbr.ComponentModel.JobStorage
 
         void UpdateProgress(long jobRunId, double? progress);
 
+        #endregion
+
+        void ApplyRetention(DateTimeOffset date);
+
         bool IsAvailable();
-
-
-
-
-
-        #endregion
-
-        #region Retention
-
-        void HardDeleteJobRunsOlderThan(DateTimeOffset date);
-
-        #endregion
     }
 }
