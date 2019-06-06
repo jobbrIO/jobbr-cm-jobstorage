@@ -7,7 +7,7 @@ branches:
     - /feature/.*/
 
 install:
-  - choco install gitversion.portable -pre -y
+  - choco install gitversion.portable -y
 
 assembly_info:
   patch: false
