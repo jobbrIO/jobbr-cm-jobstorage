@@ -81,8 +81,6 @@ namespace Jobbr.ComponentModel.JobStorage
 
         #endregion
 
-        void ApplyRetention(DateTimeOffset date);
-
         bool IsAvailable();
     }
 }
