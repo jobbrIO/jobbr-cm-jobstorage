@@ -1,3 +1,5 @@
+image: Visual Studio 2019
+
 branches:
   only:
     - master
@@ -31,6 +33,6 @@ deploy:
 - provider: NuGet
   server: https://nuget.org
   api_key:
-    secure: dmAor9/81YJtHhqccxBN1aHyDgLVB96KSqRlqnaiFxqF5ROMgz3jCivW8ROvv4N3
+    secure: yiJlhXbv75zWvfaAnpz+6xiOMC7sq4ZAIqLS0l4dwj6Kxwrwr1yaBqQe/Hy1+shY
   on:
     appveyor_repo_tag: true
