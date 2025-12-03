@@ -1,3 +1,7 @@
+> [!IMPORTANT]  
+> This repository is obsolete.  
+> Development of Jobbr has been moved to the [jobbr mono-repo](https://github.com/jobbrIO/jobbr).
+
 # Jobbr ComponentModel JobStorage [![Build status](https://img.shields.io/appveyor/build/jobbr/jobbr-cm-jobstorage/develop.svg?label=develop)](https://ci.appveyor.com/project/Jobbr/jobbr-cm-jobstorage)
 
 Component Models for implementing JobStorage-Providers
